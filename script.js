@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const inputDescricao = document.getElementById('descricao');
     const inputCategoria = document.getElementById('categoria');
     const totalTarefasElement = document.getElementById('total-tarefas'); // Novo elemento para exibir o total
-
+    
     // Array para armazenar as tarefas
     const listaDeTarefas = [];
 
@@ -32,10 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function atualizarTabela() {
+        var elementos = document.querySelectorAll('td');
+        var contAlta = 0, contMedia = 0, contBaixa = 0;
         // Limpa o corpo da tabela antes de adicionar os itens
         corpoTabelaTarefas.innerHTML = '';
-
-        let somaTotal = 0; // Variável para armazenar a soma dos valores
 
         listaDeTarefas.forEach(tarefa => {
             // Cria uma nova linha na tabela
@@ -50,18 +50,35 @@ document.addEventListener('DOMContentLoaded', () => {
             celulaDescricao.textContent = tarefa.descricao;
             celulaCategoria.textContent = tarefa.categoria;
             celulaAcoes.innerHTML += "</td><td><button class='btn btn-success'>Editar</button><button class='btn btn-danger' onclick='excluir(this.parentNode.parentNode.rowIndex)'>Excluir</button> </td></tr>";
-
+    
+        
+                var contadorAlta = document.getElementById('alta');
+                var contadorMedia = document.getElementById('media');
+                var contadorBaixa = document.getElementById('baixa');
+                
+        
+                // verifica a cor e incrementa o contador correspondente
+                if(celulaCategoria.textContent == 'Alta'){
+                    contAlta++;
+                    contadorAlta.textContent = contAlta;
+                }
+                else if((celulaCategoria.textContent == 'Media') || (celulaCategoria.textContent == 'Média')){
+                    contMedia++;
+                    contadorMedia.textContent = contMedia;
+                }
+                else if(celulaCategoria.textContent == 'Baixa'){
+                    contBaixa++;
+                    contadorBaixa.textContent = contBaixa;
+                }
 
         });
-
-
-        // Atualiza o elemento html com o valor total 
-        totalTarefasElement.textContent = `Total: ${somaTotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}`;
     }
+
+    
 
     function excluir(i){
         listaDeTarefas.splice((i - 1), 1);
-        corpoTabelaTarefas.deleteRow(i);
+        document.getElementById('corpo-tabela-tarefas').deleteRow(i);
     }
 
     // Exibe a tabela inicialmente (se houver dados já no array - útil se você implementar persistência)
