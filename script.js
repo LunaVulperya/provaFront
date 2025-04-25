@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const corpoTabelaTarefas = document.getElementById('corpo-tabela-tarefas');
     const inputDescricao = document.getElementById('descricao');
     const inputCategoria = document.getElementById('categoria');
-    const totalTarefasElement = document.getElementById('total-tarefas'); // Novo elemento para exibir o total
+
     
     // Array para armazenar as tarefas
     const listaDeTarefas = [];
@@ -32,8 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function atualizarTabela() {
-        var elementos = document.querySelectorAll('td');
-        var contAlta = 0, contMedia = 0, contBaixa = 0;
+        var contAlta = 0, contMedia = 0, contBaixa = 0, contTotal = 0;
         // Limpa o corpo da tabela antes de adicionar os itens
         corpoTabelaTarefas.innerHTML = '';
 
@@ -51,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             celulaCategoria.textContent = tarefa.categoria;
             celulaAcoes.innerHTML += "</td><td><button class='btn btn-success'>Editar</button><button class='btn btn-danger' onclick='excluir(this.parentNode.parentNode.rowIndex)'>Excluir</button> </td></tr>";
     
-        
+                var contadorTotal = document.getElementById('totalTarefas');
                 var contadorAlta = document.getElementById('alta');
                 var contadorMedia = document.getElementById('media');
                 var contadorBaixa = document.getElementById('baixa');
@@ -60,15 +59,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 // verifica a cor e incrementa o contador correspondente
                 if(celulaCategoria.textContent == 'Alta'){
                     contAlta++;
+                    contTotal++;
                     contadorAlta.textContent = contAlta;
+                    contadorTotal.textContent = contTotal;
                 }
                 else if((celulaCategoria.textContent == 'Media') || (celulaCategoria.textContent == 'Média')){
                     contMedia++;
+                    contTotal++;
                     contadorMedia.textContent = contMedia;
+                    contadorTotal.textContent = contTotal;
                 }
                 else if(celulaCategoria.textContent == 'Baixa'){
                     contBaixa++;
+                    contTotal++;
                     contadorBaixa.textContent = contBaixa;
+                    contadorTotal.textContent = contTotal;
                 }
 
         });
