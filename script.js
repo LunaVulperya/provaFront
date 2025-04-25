@@ -81,10 +81,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     
 
+    /*Função ainda nao funcionando
     function excluir(i){
         listaDeTarefas.splice((i - 1), 1);
         document.getElementById('corpo-tabela-tarefas').deleteRow(i);
-    }
+    }*/
 
     // Exibe a tabela inicialmente (se houver dados já no array - útil se você implementar persistência)
     atualizarTabela();
