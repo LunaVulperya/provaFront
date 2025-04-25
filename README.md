@@ -2,7 +2,7 @@
 
 ## Lista de Tarefas Interativa
 
-Este é um projeto simples e funcional de uma **Lista de Tarefas Interativa**, feito com HTML, CSS e JavaScript puro. 
+Este é um projeto simples e quase funcional de uma **Lista de Tarefas Interativa**, feito com HTML, CSS e JavaScript puro. 
 
 ---
 
@@ -15,7 +15,7 @@ Este é um projeto simples e funcional de uma **Lista de Tarefas Interativa**, f
       Exemplo: Alta, Média ou Baixa
 
 - Tabela com armazenamento dos dados:
-  - Listagem de todas as Tarefas realizadas ou não.
+  - Listagem de todas as Tarefas.
   - Opção de editar itens(adicionar e remover) (Ainda não implementada).
   - Valor total de tarefas
 
