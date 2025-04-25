@@ -16,7 +16,7 @@ Este é um projeto simples e funcional de uma **Lista de Tarefas Interativa**, f
 
 - Tabela com armazenamento dos dados:
   - Listagem de todas as Tarefas realizadas ou não.
-  - Opção de editar itens(adicionar e remover).
+  - Opção de editar itens(adicionar e remover) (Ainda não implementada).
   - Valor total de tarefas
 
 
