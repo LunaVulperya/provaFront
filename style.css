@@ -108,8 +108,3 @@ h1, h2 {
     color: #fff;
    
   }
-
-  /* Tentando adicionar cor de fundo em valores acima de R$100 */
-  #valor-alto {
-    background-color: red;
-  }
