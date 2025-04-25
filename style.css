@@ -15,7 +15,7 @@ h1, h2 {
 }
 
 /* Seção de formulário */
-.cadastro-gastos {
+.cadastro-tarefas {
     background-color: rgba(0, 0, 0, 0.8); /*Fundo semi transparente*/
     padding: 30px 40px;
     border-radius: 15px;
@@ -26,37 +26,56 @@ h1, h2 {
   }
 
 
-  .cadastro-gastos h2 {
+  .cadastro-tarefas h2 {
     text-align: center;
     margin-bottom: 20px;
   }
 
-  .cadastro-gastos label {
+  .cadastro-tarefas label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
   }
 
-  /* Estilização dos inputs */
-  .form-grupo input[type="text"],
-.form-grupo input[type="number"],
-.form-grupo input[type="text"] {
+  /* Estilização dos selects e inputs */
+  .form-grupos input[type="text"]{
   width: 100%;
   padding: 10px;
   border: 2px solid #00f0ff;
   border-radius: 8px;
   background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
-}
+  }
+
+  .form-grupos select{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #00f0ff;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+  }
+
+  .form-grupos select option{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #00f0ff;
+    border-radius: 8px;
+    color: #000000;
+  }
 
 
-/* Efeito quando clicar no input */
-.form-grupo input::placeholder {
+/* efeito quando clicar no input */
+.form-grupos input::placeholder {
     color: #ccc;
   }
 
-  /* Estilização do botão */
-  .cadastro-gastos button {
+
+/* Seção de botões */
+
+  /* estilização do botão */
+  .cadastro-tarefas button,
+  .lista-tarefas button {
     width: 100%;
     margin: 15px 0;
     padding: 12px;
@@ -71,12 +90,14 @@ h1, h2 {
   }
 
   /* Efeito de passar por cima do botão */
-  .cadastro-gastos button:hover {
+  .cadastro-tarefas button:hover {
     background: #00b8cc;
   }
 
-  /* Estilização da tabela */
-  .lista-gastos {
+
+
+/* Estilização da tabela */
+  .lista-tarefas {
     margin: auto;
     margin-top: 5%;
     background-color: rgba(0, 0, 0, 0.8); /*Fundo semi transparente*/
