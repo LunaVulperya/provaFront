@@ -1,25 +1,23 @@
 # Prova Front End
 
-## Calculadora de Gastos Mensais
+## Lista de Tarefas Interativa
 
-Este é um projeto simples e funcional de uma **Calculadora de Gastos Mensais**, feito com HTML, CSS e JavaScript puro. 
+Este é um projeto simples e funcional de uma **Lista de Tarefas Interativa**, feito com HTML, CSS e JavaScript puro. 
 
 ---
 
 ## Funcionalidades
 
-- Formulário com cadastro de gastos:
+- Formulário com cadastro de tarefas:
   - Campo para a descrição 
-      Exemplo: Nome do alimento
-  - Campo para o valor 
-      Exemplo: R$12,00
-  - Categoria 
-      Exemplo: Alimentação, transporte)
+      Exemplo: Nome da tarefa
+  - Prioridade 
+      Exemplo: Alta, Média ou Baixa
 
 - Tabela com armazenamento dos dados:
-  - Listagem de todos os gastos realizados.
+  - Listagem de todas as Tarefas realizadas ou não.
   - Opção de editar itens(adicionar e remover).
-  - Soma do valor total de itens.
+  - Valor total de tarefas
 
 
 ---
